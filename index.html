@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="QUADRA affianca in una sola schermata i dati di un cliente, un articolo o un fornitore che vivono in gestionali diversi. Richiedi una demo.">
+    <title>QUADRA — ESC</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Open+Sans:wght@400;600&family=Spectral:ital,wght@1,400;1,500&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        try { var t = localStorage.getItem('esc-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) { }
+    </script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip" href="#demo">Vai al modulo di richiesta demo</a>
+
+    <header class="top">
+        <div class="wrap nav">
+            <a class="brand" href="#top" aria-label="QUADRA, torna su">
+                <svg viewBox="0 0 136 136" aria-hidden="true">
+                    <g transform="translate(0,136) scale(0.1,-0.1)" fill="currentColor">
+                        <path d="M218 1308 c-9 -7 -55 -56 -102 -108 l-86 -94 0 -448 0 -448 85 0 85 0 0 -85 0 -85 448 0 448 0 97 107 97 107 -2 530 -3 531 -525 3 c-411 2 -530 -1 -542 -10z m207 -502 c41 -18 65 -52 72 -106 l6 -40 -112 0 c-61 0 -111 -4 -111 -9 0 -5 12 -23 26 -40 32 -39 87 -43 128 -10 25 20 29 20 43 6 22 -21 6 -41 -52 -63 -165 -63 -273 164 -122 256 38 24 75 25 122 6z m312 -10 c26 -23 27 -26 12 -41 -16 -16 -19 -16 -46 4 -24 18 -34 20 -56 12 -55 -21 -29 -57 56 -75 67 -15 90 -91 41 -137 -34 -32 -110 -34 -150 -4 -30 23 -33 35 -10 50 10 6 21 4 34 -9 14 -12 32 -16 59 -14 33 3 38 7 41 30 3 25 -1 28 -53 44 -64 18 -95 43 -95 77 0 75 107 115 167 63z m297 10 c44 -18 54 -35 31 -52 -16 -12 -21 -11 -37 3 -29 26 -88 20 -115 -12 -33 -37 -32 -107 2 -140 29 -30 89 -34 117 -8 17 16 20 16 36 -1 16 -16 16 -18 -8 -36 -38 -30 -84 -35 -136 -15 -58 22 -84 62 -84 130 0 111 93 173 194 131z" />
+                        <path d="M333 765 c-27 -11 -53 -41 -53 -59 0 -3 38 -6 85 -6 69 0 85 3 85 15 0 16 -35 55 -49 55 -5 0 -15 2 -23 5 -7 2 -27 -2 -45 -10z" />
+                    </g>
+                </svg>
+                <span class="brand-name">QUADRA</span>
+                <span class="brand-by">by ESC</span>
+            </a>
+            <nav class="nav-links" aria-label="Sezioni">
+                <a href="#come-funziona">Come funziona</a>
+                <a href="#caratteristiche">Caratteristiche</a>
+                <a href="#i-tuoi-dati">I tuoi dati</a>
+                <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambia tema">◐</button>
+                <a href="#demo" class="btn btn-primary">Richiedi una demo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="eyebrow">Un prodotto ESC · banco di riscontro</div>
+                    <h1>Un cliente, tre sistemi. <em>Una schermata.</em></h1>
+                    <p class="lead">Scegli un cliente, un articolo o un fornitore: QUADRA interroga i tuoi gestionali e ti mette davanti le estrazioni collegate, già filtrate e affiancate. Per controllare i numeri senza ricopiarli in Excel.</p>
+                    <div class="actions">
+                        <a href="#demo" class="btn btn-primary">Richiedi una demo</a>
+                        <a href="#come-funziona" class="btn btn-ghost">Come funziona</a>
+                    </div>
+                    <div class="meta">
+                        <span><b>Locale</b></span><span><b>Nessun cloud</b></span><span><b>Nessun database aggiuntivo</b></span><span>Windows</span><span>Qualsiasi gestionale</span>
+                    </div>
+                </div>
+
+                <div class="panel" aria-label="Esempio del banco QUADRA">
+                    <div class="panel-bar"><i></i><i></i><i></i><span>quadra · anagrafica clienti · dati di esempio</span></div>
+                    <div class="panel-body">
+                        <div class="entities" id="entities">
+                            <button type="button" class="entity" data-entity="c1" aria-pressed="true"><span>C001</span>D'Angelo S.r.l.</button>
+                            <button type="button" class="entity" data-entity="c2" aria-pressed="false"><span>C002</span>Officine Rossi</button>
+                            <button type="button" class="entity" data-entity="c3" aria-pressed="false"><span>C003</span>Tessile Bianchi</button>
+                        </div>
+                        <table class="bench">
+                            <caption class="sr-only">Estrazioni collegate al cliente selezionato, una per fonte</caption>
+                            <thead>
+                                <tr><th scope="col">Estrazione</th><th scope="col" class="n">Righe</th><th scope="col" class="n">Totale €</th></tr>
+                            </thead>
+                            <tbody data-entity="c1">
+                                <tr><th scope="row">Fatture emesse<small>Gestionale · letta alle 09:42</small></th><td class="n">48</td><td class="n">184.320,50</td></tr>
+                                <tr><th scope="row">Movimenti contabili<small>SQL Server · letta alle 09:42</small></th><td class="n">52</td><td class="n">184.320,50</td></tr>
+                                <tr><th scope="row">DDT consegnati<small>OpenEdge · letta alle 09:43</small></th><td class="n">46</td><td class="n">181.905,10</td></tr>
+                            </tbody>
+                            <tbody data-entity="c2" hidden>
+                                <tr><th scope="row">Fatture emesse<small>Gestionale · letta alle 09:44</small></th><td class="n">17</td><td class="n">62.118,00</td></tr>
+                                <tr><th scope="row">Movimenti contabili<small>SQL Server · letta alle 09:44</small></th><td class="n">17</td><td class="n">62.118,00</td></tr>
+                                <tr><th scope="row">DDT consegnati<small>OpenEdge · letta alle 09:44</small></th><td class="n">17</td><td class="n">62.118,00</td></tr>
+                            </tbody>
+                            <tbody data-entity="c3" hidden>
+                                <tr><th scope="row">Fatture emesse<small>Gestionale · letta alle 09:46</small></th><td class="n">31</td><td class="n">97.450,75</td></tr>
+                                <tr><th scope="row">Movimenti contabili<small>SQL Server · letta alle 09:46</small></th><td class="n">30</td><td class="n">96.210,75</td></tr>
+                                <tr><th scope="row">DDT consegnati<small>OpenEdge · letta alle 09:47</small></th><td class="n">31</td><td class="n">97.450,75</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="bench-cap">Una selezione, tre fonti affiancate. Cambia cliente e guarda i totali.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pain">
+            <div class="wrap">
+                <div class="pain-title">Se succede ogni giorno, non è più un'eccezione.</div>
+                <ul>
+                    <li>Aprire tre programmi per controllare un solo cliente</li>
+                    <li>Esportare in Excel e incollare per poter confrontare</li>
+                    <li>Rifare ogni mese lo stesso confronto da capo</li>
+                    <li>Tenere un file diverso per ogni persona</li>
+                    <li>Non sapere più quando è stato estratto un numero</li>
+                    <li>Interrogare il gestionale e ricopiare il risultato a mano</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="sec" id="come-funziona">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Come funziona</div>
+                    <h2>Quattro passi. <em>La query resta la fonte di verità.</em></h2>
+                    <p>QUADRA esegue le tue estrazioni e le rende consultabili. Una volta definite, chi consulta non deve toccare SQL.</p>
+                </div>
+                <div class="steps four">
+                    <div class="step">
+                        <div class="step-n">01</div>
+                        <h3>Collega</h3>
+                        <p>Configuri le fonti dati una volta sola. Ogni connessione viene provata prima di essere salvata.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">02</div>
+                        <h3>Definisci</h3>
+                        <p>Scrivi anagrafiche ed estrazioni in SQL, con le variabili che le collegano fra loro.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">03</div>
+                        <h3>Seleziona</h3>
+                        <p>Scegli un cliente, un articolo o un fornitore e aggiorni le griglie: le estrazioni si rileggono su quella selezione.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">04</div>
+                        <h3>Leggi</h3>
+                        <p>Consulti i risultati in griglia, fonte per fonte, con l'orario in cui ogni dato è stato letto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec" id="caratteristiche">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Caratteristiche</div>
+                    <h2>Ogni numero, <em>con la sua provenienza.</em></h2>
+                    <p>Uno strumento di lavoro per chi controlla i dati ogni giorno.</p>
+                </div>
+                <div class="feats">
+                    <div class="feat">
+                        <div class="k">griglia</div>
+                        <h3>Una griglia che sa fare i conti</h3>
+                        <p>Ordinamento, filtri per colonna, subtotali e pivot direttamente sui risultati. Quando serve, esporti la vista in CSV.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">fonti</div>
+                        <h3>Gestionali vecchi e nuovi, insieme</h3>
+                        <p>AS/400, OpenEdge, SQL Server, Oracle, PostgreSQL, MySQL, ODBC e JDBC. Ogni estrazione sceglie la sua connessione.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">variabili</div>
+                        <h3>Filtri che seguono il lavoro</h3>
+                        <p>Le variabili alimentano tutte le estrazioni collegate e passano al database come parametri. I filtri opzionali entrano nella query solo quando hanno un valore.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">provenienza</div>
+                        <h3>Ogni dato dice quando è stato letto</h3>
+                        <p>Ogni estrazione porta il suo orario di lettura, così sai se stai confrontando numeri dello stesso momento.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">connessioni</div>
+                        <h3>Provate prima di salvare</h3>
+                        <p>Le connessioni si configurano dall'app, e nessuna diventa attiva senza aver superato la prova.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">in sviluppo</div>
+                        <h3>Regole di riscontro <span class="tag-dev">In sviluppo</span></h3>
+                        <p>Il passo successivo: dichiarare che due totali devono coincidere, entro una tolleranza, e far segnalare a QUADRA quando non succede. Se ti serve, parliamone durante la demo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec" id="i-tuoi-dati">
+            <div class="wrap pov">
+                <div class="pov-text">
+                    <div class="eyebrow">I tuoi dati</div>
+                    <h2>I dati restano da te. <em>Nessun cloud in mezzo.</em></h2>
+                    <p>QUADRA nasce in <strong>ESC Enterprise Software Consulting</strong>, a Treviglio, da oltre vent'anni di lavoro su gestionali e dati aziendali.</p>
+                    <p>Si installa in una cartella su un PC Windows, si collega direttamente ai tuoi sistemi e non richiede un database aggiuntivo.</p>
+                    <p>Le password restano in un file locale dedicato e non finiscono mai negli export. Anagrafiche ed estrazioni sono SQL leggibile, esportabile quando vuoi.</p>
+                </div>
+                <blockquote class="quote">Un controllo rifatto a mano serve una volta. Un'estrazione definita bene serve ogni volta.<small>ESC · dal 2003</small></blockquote>
+            </div>
+        </section>
+
+        <section class="sec get" id="demo">
+            <div class="wrap get-grid">
+                <div class="sec-head" style="margin-bottom:0">
+                    <div class="eyebrow">Richiedi una demo</div>
+                    <h2>Portaci un controllo <em>che oggi fai a mano.</em></h2>
+                    <p>Raccontaci quale riscontro ti porta via più tempo e su quali sistemi vivono i dati. Ti ricontattiamo per fissare la demo e la impostiamo su quel caso.</p>                </div>
+
+                <form class="form" id="demoForm" novalidate>
+                    <input type="text" name="url_aziendale" id="honeypot" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="row2">
+                        <div class="field">
+                            <label for="nome">Nome <b>*</b></label>
+                            <input type="text" id="nome" name="nome" required autocomplete="given-name" aria-describedby="nome-err">
+                            <p class="err" id="nome-err"></p>
+                        </div>
+                        <div class="field">
+                            <label for="cognome">Cognome <b>*</b></label>
+                            <input type="text" id="cognome" name="cognome" required autocomplete="family-name" aria-describedby="cognome-err">
+                            <p class="err" id="cognome-err"></p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email di lavoro <b>*</b></label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="nome@azienda.it" aria-describedby="email-err">
+                        <p class="err" id="email-err"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="messaggio">Quale controllo fai oggi a mano? <b>*</b></label>
+                        <textarea id="messaggio" name="messaggio" required maxlength="1200" placeholder="Es. ogni mese confrontiamo il fatturato per cliente con la contabilità, partendo da due export diversi." aria-describedby="messaggio-err"></textarea>
+                        <p class="err" id="messaggio-err"></p>
+                    </div>
+
+                    <div class="consent">
+                        <label><input type="checkbox" id="privacy" name="privacy" value="si" required aria-describedby="privacy-err"> <span>Ho letto l'<a href="https://esconsulting.it/docs/privacy/Informativa_PotenzialiClienti.pdf" target="_blank" rel="noopener">informativa sul trattamento dei dati</a> e acconsento al ricontatto per la demo. <b>*</b></span></label>
+                        <p class="err" id="privacy-err"></p>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Richiedi la demo →</button>
+                    <p id="formFeedback" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <div class="foot-grid">
+                <div>
+                    <h4>ESC Enterprise Software Consulting srl</h4>
+                    <span>Via Torriani, 13 · 24047 Treviglio (BG)</span>
+                    <span>Tel. +39 0363 302050</span>
+                    <a href="mailto:info@esconsulting.it">info@esconsulting.it</a>
+                    <span>P.Iva IT03031480167</span>
+                </div>
+                <div>
+                    <h4>Strumenti AI di ESC</h4>
+                    <a href="https://escsrl.github.io/esc-safedoc-releases/" target="_blank" rel="noopener">SafeDoc · anonimizza i documenti</a>
+                    <a href="https://escsrl.github.io/prompt-book/" target="_blank" rel="noopener">PromptBook · i prompt che funzionano</a>
+                    <span>TaskBook · in sviluppo</span>
+                </div>
+                <div>
+                    <h4>ESC</h4>
+                    <a href="https://esconsulting.it/" target="_blank" rel="noopener">esconsulting.it</a>
+                    <a href="https://www.ezdoc.it/" target="_blank" rel="noopener">EZDoc</a>
+                    <a href="https://www.linkedin.com/company/esc-enterprise-software-consulting/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://esconsulting.it/docs/privacy/Informativa_PotenzialiClienti.pdf" target="_blank" rel="noopener">Privacy</a>
+                </div>
+            </div>
+            <div class="foot-copy"><span>© 2026 ESC Enterprise Software Consulting srl · dal 2003</span><span>QUADRA · Elaborazione locale</span></div>
+        </div>
+    </footer>
+</body>
+</html>
