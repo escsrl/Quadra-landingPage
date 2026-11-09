@@ -5,23 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description"
-        content="QUADRA affianca in una sola schermata i dati di un cliente, un articolo o un fornitore che vivono in gestionali diversi. Richiedi una demo.">
+        content="QUADRA affianca in una sola schermata i dati di un cliente, un articolo o un fornitore che vivono in gestionali diversi.">
     <title>QUADRA — ESC</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Open+Sans:wght@400;600&family=Spectral:ital,wght@1,400;1,500&display=swap">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=3">
     <script>
         try { var t = localStorage.getItem('esc-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) { }
     </script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=2" defer></script>
 </head>
 
 <body>
-    <a class="skip" href="#demo">Vai al modulo di richiesta demo</a>
-
     <header class="top">
         <div class="wrap nav">
             <a class="brand" href="#top" aria-label="QUADRA by ESC, torna su">
@@ -49,7 +47,6 @@
                 <a href="#i-tuoi-dati">I tuoi dati</a>
             </nav>
             <div class="nav-actions">
-                <a href="#demo" class="btn btn-primary">Richiedi una demo</a>
                 <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambia tema"><span class="i-sun"
                         aria-hidden="true">☀︎</span><span class="i-moon" aria-hidden="true">☾</span></button>
             </div>
@@ -66,7 +63,6 @@
                         ti mette davanti le estrazioni collegate, già filtrate e affiancate. Per controllare i numeri
                         senza ricopiarli in Excel.</p>
                     <div class="actions">
-                        <a href="#demo" class="btn btn-primary">Richiedi una demo</a>
                         <a href="#come-funziona" class="btn btn-ghost">Come funziona</a>
                     </div>
                     <div class="meta">
@@ -247,7 +243,7 @@
                         <div class="k">in sviluppo</div>
                         <h3>Regole di riscontro <span class="tag-dev">In sviluppo</span></h3>
                         <p>Il passo successivo: dichiarare che due totali devono coincidere, entro una tolleranza, e far
-                            segnalare a QUADRA quando non succede. Se ti serve, parliamone durante la demo.</p>
+                            segnalare a QUADRA quando non succede.</p>
                     </div>
                 </div>
             </div>
@@ -267,63 +263,6 @@
                 </div>
                 <blockquote class="quote">Un controllo rifatto a mano serve una volta. Un'estrazione definita bene serve
                     ogni volta.<small>ESC · dal 2003</small></blockquote>
-            </div>
-        </section>
-
-        <section class="sec get" id="demo">
-            <div class="wrap get-grid">
-                <div class="sec-head" style="margin-bottom:0">
-                    <div class="eyebrow">Richiedi una demo</div>
-                    <h2>Portaci un controllo <em>che oggi fai a mano.</em></h2>
-                    <p>Raccontaci quale riscontro ti porta via più tempo e su quali sistemi vivono i dati. Ti
-                        ricontattiamo per fissare la demo e la impostiamo su quel caso.</p>
-                </div>
-
-                <form class="form" id="demoForm" novalidate>
-                    <input type="text" name="url_aziendale" id="honeypot" class="hp" tabindex="-1" autocomplete="off"
-                        aria-hidden="true">
-
-                    <div class="row2">
-                        <div class="field">
-                            <label for="nome">Nome <b>*</b></label>
-                            <input type="text" id="nome" name="nome" required autocomplete="given-name"
-                                aria-describedby="nome-err">
-                            <p class="err" id="nome-err"></p>
-                        </div>
-                        <div class="field">
-                            <label for="cognome">Cognome <b>*</b></label>
-                            <input type="text" id="cognome" name="cognome" required autocomplete="family-name"
-                                aria-describedby="cognome-err">
-                            <p class="err" id="cognome-err"></p>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="email">Email di lavoro <b>*</b></label>
-                        <input type="email" id="email" name="email" required autocomplete="email"
-                            placeholder="nome@azienda.it" aria-describedby="email-err">
-                        <p class="err" id="email-err"></p>
-                    </div>
-
-                    <div class="field">
-                        <label for="messaggio">Quale controllo fai oggi a mano? <b>*</b></label>
-                        <textarea id="messaggio" name="messaggio" required maxlength="1200"
-                            placeholder="Es. ogni mese confrontiamo il fatturato per cliente con la contabilità, partendo da due export diversi."
-                            aria-describedby="messaggio-err"></textarea>
-                        <p class="err" id="messaggio-err"></p>
-                    </div>
-
-                    <div class="consent">
-                        <label><input type="checkbox" id="privacy" name="privacy" value="si" required
-                                aria-describedby="privacy-err"> <span>Ho letto l'<a
-                                    href="https://esconsulting.it/docs/privacy/Informativa_PotenzialiClienti.pdf"
-                                    target="_blank" rel="noopener">informativa sul trattamento dei dati</a> e acconsento
-                                al ricontatto per la demo. <b>*</b></span></label>
-                        <p class="err" id="privacy-err"></p>
-                    </div>
-
-                    <button type="submit" id="submitBtn" class="btn btn-primary">Richiedi la demo →</button>
-                    <p id="formFeedback" role="status"></p>
-                </form>
             </div>
         </section>
     </main>
