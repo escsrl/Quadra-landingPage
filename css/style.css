@@ -199,30 +199,29 @@ header.top {
 }
 
 .brand svg {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     color: var(--fg);
     flex: none;
 }
 
 .brand-name {
     font-family: var(--mono);
-    font-weight: 500;
-    font-size: 10.5px;
-    line-height: 1.25;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.brand-product {
-    font-family: var(--mono);
     font-weight: 600;
     font-size: 17px;
     letter-spacing: -0.01em;
     white-space: nowrap;
+}
+
+.brand-by {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--grey-dim);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     border-left: 1px solid var(--line);
     padding-left: 12px;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -230,9 +229,7 @@ header.top {
     align-items: center;
     gap: 26px;
     font-size: 14px;
-    height: 38px;
-    padding-left: 24px;
-    border-left: 1px solid var(--line);
+    margin-left: 12px;
 }
 
 .nav-actions {
@@ -295,7 +292,9 @@ header.top {
 }
 
 @media (max-width: 900px) {
-    .nav-links {
+
+    .nav-links,
+    .brand-by {
         display: none;
     }
 }
@@ -319,19 +318,8 @@ header.top {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
     .brand-name {
-        display: none;
-    }
-
-    .brand-product {
-        border-left: 0;
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 340px) {
-    .brand-product {
         display: none;
     }
 }
